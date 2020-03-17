@@ -5,14 +5,24 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020
 {
-    class Funcionario
+    public class Funcionario
     {
-        private string matricula;
-        private string nome;
-        private double salario;
-        private DateTime dataAdmi;
-        private char tipoFunc; // c - CLT, a - autonomo, p - pro-labore
-        private string cargo;
+    
+        public string Matricula { get; private set; }
+        private string Nome { get; set; }
+        private double Salario { get; set; }
+        private DateTime DataAdmissao { get; set; }
+        private string TipoFuncionario { get; set; } // Douglas disse que essa propriedade não sera necessaria
+        private string Cargo { get; set; }
 
+        public Funcionario(string matricula, string nome, double salario, DateTime dataAdmissao, string tipoFuncionario, string cargo)
+        {
+            Matricula = matricula;
+            Nome = nome;
+            Salario = salario;
+            DataAdmissao = dataAdmissao;
+            TipoFuncionario = tipoFuncionario;
+            Cargo = cargo;
+        }       
     }
 }

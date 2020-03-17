@@ -9,6 +9,8 @@ namespace LgProgramaDeEstagio2020
     {
         static void Main(string[] args)
         {
+            var func = new Funcionario();
+
         }
     }
 }
