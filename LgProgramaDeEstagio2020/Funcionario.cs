@@ -8,12 +8,12 @@ namespace LgProgramaDeEstagio2020
     public class Funcionario
     {
     
-        public string Matricula { get; private set; }
-        private string Nome { get; set; }
-        private double Salario { get; set; }
-        private DateTime DataAdmissao { get; set; }
-        private string TipoFuncionario { get; set; } // Douglas disse que essa propriedade não sera necessaria
-        private string Cargo { get; set; }
+        public string Matricula { get; protected set; }
+        public string Nome { get; protected set; }
+        public double Salario { get; protected set; }
+        public DateTime DataAdmissao { get; protected set; }
+        public string TipoFuncionario { get; protected set; } // Douglas disse que essa propriedade não sera necessaria
+        public string Cargo { get; protected set; }
 
         public Funcionario(string matricula, string nome, double salario, DateTime dataAdmissao, string tipoFuncionario, string cargo)
         {
