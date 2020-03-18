@@ -42,7 +42,6 @@ namespace LgProgramaDeEstagio2020
                 .Sum(x => x.ObtenhaIntervaloDeDias());
                 */
             return contadorDias;
-
         }
     }
 

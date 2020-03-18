@@ -6,25 +6,23 @@ using System.Text;
 namespace LgProgramaDeEstagio2020
 {
     //SERVE PARA LANÇAR EVENTOS RELACIONADOS A FÉRIAS E AFASTAMENTO
-    public struct Eventos
+    public class Eventos
     {
-        public string TipoEvento { get; private set; }
         public DateTime DataInicio { get; private set; }
         public DateTime DataFim { get; private set; }
 
-        public Eventos(string tipoEvento, DateTime dataInicio, DateTime dataFim)
+        public Eventos(DateTime dataInicio, DateTime dataFim)
         {
-            TipoEvento = tipoEvento;
             DataInicio = dataInicio;
             DataFim = dataFim;
         }
 
-        public int ObtenhaIntervaloDeDias()
-        {
+        public int ObtenhaIntervaloDeDias() //Para autônomo
+        {   
             return (DataFim - DataInicio).Days;
         }
 
-        public int DiasUteis()
+        public int ObtenhaIntervaloDiasUteis() //Para CLT
         {
             int ContadorDias = 0;
             for (DateTime i = DataInicio.Date; i <= DataFim.Date; i.AddDays(1))
@@ -36,6 +34,8 @@ namespace LgProgramaDeEstagio2020
             }
             return ContadorDias;
         }
+
+        
 
     }
 }
