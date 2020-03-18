@@ -10,7 +10,7 @@ namespace LgProgramaDeEstagio2020
         static void Main(string[] args)
         {
             //var func = new Funcionario();
-
+            var eventos = new Eventos("", DateTime.Now, DateTime.Now);            
         }
     }
 }
