@@ -5,8 +5,7 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020
 {
-
-    public class Eventos
+    public struct Eventos
     {
         public string TipoDeEvento { get; private set; }
         public DateTime DataInicio { get; private set; }
@@ -17,14 +16,29 @@ namespace LgProgramaDeEstagio2020
             TipoDeEvento = tipoDeEvento;
             DataInicio = dataInicio;
             DataFim = dataFim;
-        }        
+        }
 
 
         //
 
-        public int ObtenhaDiasAusentes()
+        public int ObtenhaIntervaloDeDias()
         {
-            return 0;
+            return (DataFim - DataInicio).Days;
         }
+
+        public int DiasUteis()
+        {
+            int ContadorDias = 0;
+            for (DateTime i = DataInicio.Date; i <= DataFim.Date; i.AddDays(1))
+            {
+                if (i.DayOfWeek != DayOfWeek.Saturday && i.DayOfWeek != DayOfWeek.Sunday)
+                {
+                    ContadorDias++;
+                }
+
+            }
+            return ContadorDias;
+        }
+
     }
 }
