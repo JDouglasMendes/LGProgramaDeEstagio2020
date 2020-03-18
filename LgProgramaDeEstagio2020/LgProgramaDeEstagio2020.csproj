@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculaFolha.cs" />
+    <Compile Include="Afastamento.cs" />
+    <Compile Include="Ferias.cs" />
     <Compile Include="Clt.cs" />
     <Compile Include="Eventos.cs" />
     <Compile Include="Funcionario.cs" />
