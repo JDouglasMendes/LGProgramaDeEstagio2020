@@ -47,8 +47,10 @@
     <Compile Include="Clt.cs" />
     <Compile Include="Eventos.cs" />
     <Compile Include="Funcionario.cs" />
+    <Compile Include="ICalculoFolhaDePagamento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Referencia.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
