@@ -5,10 +5,10 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020
 {
-    public sealed class Singleton<TTipoFuncionario> where TTipoFuncionario : Funcionario
+    public sealed class Singleton
     {
         private static volatile Singleton instance;
-        private static FabricaCalculoDeSalarioDeFuncionario<TTipoFuncionario> syncRoot = new FabricaCalculoDeSalarioDeFuncionario<TTipoFuncionario>();
+        private static object syncRoot = new Object();
 
         private Singleton() { }
 
