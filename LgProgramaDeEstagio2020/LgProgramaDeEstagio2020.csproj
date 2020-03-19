@@ -45,6 +45,7 @@
     <Compile Include="CalculaFolha.cs" />
     <Compile Include="Afastamento.cs" />
     <Compile Include="CalculoSalarioAutonomo.cs" />
+    <Compile Include="CalculoSalarioProlabore.cs" />
     <Compile Include="DiasTrabalhadosNoMes.cs" />
     <Compile Include="Ferias.cs" />
     <Compile Include="Clt.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Funcionario.cs" />
     <Compile Include="ICalculoFolhaDePagamento.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Prolabore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Referencia.cs" />
   </ItemGroup>

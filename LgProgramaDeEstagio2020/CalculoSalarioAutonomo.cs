@@ -9,9 +9,8 @@ namespace LgProgramaDeEstagio2020
     {
         public double CalcularFolha(Autonomo autonomo, Referencia referencia)
         {
-            return (autonomo.Salario / DateTime.DaysInMonth(referencia.Ano, referencia.Mes)) * autonomo.DiasTrabalhadosNoMes(referencia);
+            return CalculaFolha.CalcularFolha(autonomo.Salario, autonomo.DiasTrabalhadosNoMes(referencia), referencia);
         }
 
     }
 }
-
