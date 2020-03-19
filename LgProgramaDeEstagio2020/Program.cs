@@ -9,8 +9,10 @@ namespace LgProgramaDeEstagio2020
     {
         static void Main(string[] args)
         {
-            //var func = new Funcionario();
-            var eventos = new Eventos("", DateTime.Now, DateTime.Now);            
+            var func = new Autonomo("0", "", 0, DateTime.Now, "", "");
+            func.ListaDeDiasTrabalhados.Clear();
+
+          //  var eventos = new Eventos("", DateTime.Now, DateTime.Now);            
         }
     }
 }

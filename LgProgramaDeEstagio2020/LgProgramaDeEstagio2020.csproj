@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Autonomo.cs" />
     <Compile Include="CalculaFolha.cs" />
     <Compile Include="Afastamento.cs" />
+    <Compile Include="CalculoSalarioAutonomo.cs" />
+    <Compile Include="DiasTrabalhadosNoMes.cs" />
     <Compile Include="Ferias.cs" />
     <Compile Include="Clt.cs" />
     <Compile Include="Eventos.cs" />

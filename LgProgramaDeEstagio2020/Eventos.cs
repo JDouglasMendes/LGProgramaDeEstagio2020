@@ -6,19 +6,19 @@ using System.Text;
 namespace LgProgramaDeEstagio2020
 {
     //SERVE PARA LANÇAR EVENTOS RELACIONADOS A FÉRIAS E AFASTAMENTO
-    public class Eventos
+    public abstract class Eventos
     {
         public DateTime DataInicio { get; private set; }
         public DateTime DataFim { get; private set; }
 
         public Eventos(DateTime dataInicio, DateTime dataFim)
         {
-            DataInicio = dataInicio;
+            DataInicio = dataInicio; // Lembrar de tratar entradas com mes de inicio diferente de mes de fim
             DataFim = dataFim;
         }
 
-        public int ObtenhaIntervaloDeDias() //Para autônomo
-        {   
+        public int ObtenhaIntervaloDeDias()
+        {
             return (DataFim - DataInicio).Days;
         }
 

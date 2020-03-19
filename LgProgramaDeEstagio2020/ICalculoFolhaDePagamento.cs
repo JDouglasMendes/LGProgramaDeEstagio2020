@@ -5,10 +5,8 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020
 {
-    public interface ICalculoFolhaDePagamento
+    public interface ICalculoFolhaDePagamento<TTipoFuncionario> where TTipoFuncionario : Funcionario       
     {
-        double CalcularFolha(Funcionario funcionario, Referencia referencia);
-        
-
+        double CalcularFolha(TTipoFuncionario funcionario, Referencia referencia);       
     }
 }
