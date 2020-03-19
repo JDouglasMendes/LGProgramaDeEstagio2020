@@ -3,28 +3,53 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
+
 namespace LgProgramaDeEstagio2020
 {
-    public class FabricaCalculoDeSalarioDeFuncionario<TTipoFuncionario> where TTipoFuncionario : Funcionario
+    static public class FabricaCalculoDeSalarioDeFuncionario<TTipoFuncionario> where TTipoFuncionario : Funcionario
     {
 
-        public ICalculoFolhaDePagamento<TTipoFuncionario> Crie()
+        private static Dictionary<string, ICalculoFolhaDePagamento<TTipoFuncionario>> dictionaryDeCalculoDeSalario;
+
+
+        
+        static FabricaCalculoDeSalarioDeFuncionario()
         {
+            dictionaryDeCalculoDeSalario = new Dictionary<string, ICalculoFolhaDePagamento<TTipoFuncionario>>() {
+                { "LgProgramaDeEstagio2020.Clt", (ICalculoFolhaDePagamento<TTipoFuncionario>) new CalculoSalarioClt()  },
+                { "LgProgramaDeEstagio2020.Autonomo", (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioAutonomo()},
+                { "LgProgramaDeEstagio2020.Prolabore", (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioProlabore()}
+            };
 
-            switch(typeof(TTipoFuncionario).FullName)
-            {
-                case "LgProgramaDeEstagio2020.Clt":
-                    return (ICalculoFolhaDePagamento<TTipoFuncionario>) new CalculoSalarioClt();
-                    
-                case "LgProgramaDeEstagio2020.Prolabore":
-                    return (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioProlabore();
+        }
 
-                case "LgProgramaDeEstagio2020.Autonomo":
-                    return (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioAutonomo();
-                    
+        public static ICalculoFolhaDePagamento<TTipoFuncionario> Crie()
+        {
+       
+            return dictionaryDeCalculoDeSalario[(typeof(TTipoFuncionario).FullName)];
+        }
 
-            }
-            return null;
-        }        
+
+        //public ICalculoFolhaDePagamento<TTipoFuncionario> Crie()
+        //{
+
+        //    //switch(typeof(TTipoFuncionario).FullName)
+        //    //{
+        //    //    case "LgProgramaDeEstagio2020.Clt":
+        //    //        return (ICalculoFolhaDePagamento<TTipoFuncionario>) new CalculoSalarioClt();
+
+        //    //    case "LgProgramaDeEstagio2020.Prolabore":
+        //    //        return (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioProlabore();
+
+        //    //    case "LgProgramaDeEstagio2020.Autonomo":
+        //    //        return (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioAutonomo();
+
+
+        //    //}
+        //}
+
+
+
+        }
     }
-}

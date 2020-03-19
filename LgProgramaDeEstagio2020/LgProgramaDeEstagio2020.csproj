@@ -58,6 +58,7 @@
     <Compile Include="Prolabore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Referencia.cs" />
+    <Compile Include="Singleton.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
