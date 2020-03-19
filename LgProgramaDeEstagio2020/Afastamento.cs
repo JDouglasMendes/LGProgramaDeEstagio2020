@@ -10,7 +10,9 @@ namespace LgProgramaDeEstagio2020
         public Afastamento(DateTime dataInicio, DateTime dataFim) :
             base(dataInicio, dataFim)
         {
+
         }
+
 
     }
 }

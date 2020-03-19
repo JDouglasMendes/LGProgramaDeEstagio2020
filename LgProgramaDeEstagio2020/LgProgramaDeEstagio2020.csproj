@@ -45,8 +45,10 @@
     <Compile Include="CalculaFolha.cs" />
     <Compile Include="Afastamento.cs" />
     <Compile Include="CalculoSalarioAutonomo.cs" />
+    <Compile Include="CalculoSalarioClt.cs" />
     <Compile Include="CalculoSalarioProlabore.cs" />
     <Compile Include="DiasTrabalhadosNoMes.cs" />
+    <Compile Include="FabricaCalculoDeSalarioDeFuncionario.cs" />
     <Compile Include="Ferias.cs" />
     <Compile Include="Clt.cs" />
     <Compile Include="Eventos.cs" />
