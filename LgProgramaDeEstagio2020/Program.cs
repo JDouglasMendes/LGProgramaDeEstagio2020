@@ -13,7 +13,9 @@ namespace LgProgramaDeEstagio2020
             //func.ListaDeDiasTrabalhados.Clear();
 
             //  var eventos = new Eventos("", DateTime.Now, DateTime.Now);            
-            FabricaCalculoDeSalarioDeFuncionario<Autonomo>.Crie();
+            //FabricaCalculoDeSalarioDeFuncionario<Autonomo>.Crie();
+
+
         }
     }
 }

@@ -5,12 +5,19 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020
 {
-    public class Prolabore : Autonomo
+    public class Prolabore : Autonomo , IContratoDeFerias
     {
+        private List<Ferias> listaDeFerias { get; set; }
+
         public Prolabore(string matricula, string nome, double salario, DateTime dataAdmissao, string tipoFuncionario, string cargo) 
             : base(matricula, nome, salario, dataAdmissao, tipoFuncionario, cargo)
         {
            
         }
+        public void AdicionarFerias(Ferias ferias)
+        {
+            listaDeFerias.Add(ferias);
+        }
+
     }
 }

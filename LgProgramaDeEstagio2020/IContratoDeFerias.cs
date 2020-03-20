@@ -5,7 +5,11 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020
 {
-    interface Interface1
+    public interface IContratoDeFerias
     {
+ 
+        void AdicionarFerias(Ferias ferias);
+        
+
     }
 }

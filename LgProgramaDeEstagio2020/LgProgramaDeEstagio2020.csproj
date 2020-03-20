@@ -44,6 +44,7 @@
     <Compile Include="Autonomo.cs" />
     <Compile Include="CalculaFolha.cs" />
     <Compile Include="Afastamento.cs" />
+    <Compile Include="CalculoDeFerias.cs" />
     <Compile Include="CalculoSalarioAutonomo.cs" />
     <Compile Include="CalculoSalarioClt.cs" />
     <Compile Include="CalculoSalarioProlabore.cs" />
@@ -54,11 +55,11 @@
     <Compile Include="Eventos.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="ICalculoFolhaDePagamento.cs" />
+    <Compile Include="IContratoDeFerias.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Prolabore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Referencia.cs" />
-    <Compile Include="Singleton.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

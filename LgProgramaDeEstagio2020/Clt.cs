@@ -5,9 +5,10 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020
 {
-    public class Clt : Funcionario
+    public class Clt : Funcionario, IContratoDeFerias
     {
-        //private List<Ferias> listaDeFerias;
+
+        private List<Ferias> listaDeFerias { get; set; }
         private List<Afastamento> listaDeDiasAfastado;
 
         public Clt(string matricula, string nome, double salario, DateTime dataAdmissao, string tipoFuncionario, string cargo) : 
@@ -16,9 +17,16 @@ namespace LgProgramaDeEstagio2020
              listaDeDiasAfastado = new List<Afastamento>();
         }
 
+        
+
         public void AdicioneDiasAfastados(Afastamento diasAfastadosNoMes)
         {
             listaDeDiasAfastado.Add(diasAfastadosNoMes);
+        }
+
+        public void AdicionarFerias(Ferias ferias)
+        {
+            listaDeFerias.Add(ferias);
         }
 
         public int DiasAfastadosNoMes(Referencia referencia)
