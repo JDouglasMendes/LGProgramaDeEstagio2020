@@ -7,14 +7,12 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020
 {
-    static public class FabricaCalculoDeSalarioDeFuncionario<TTipoFuncionario> where TTipoFuncionario : Funcionario
-    {
+     public sealed class FabricaCalculoDeSalarioDeFuncionario<TTipoFuncionario> where TTipoFuncionario : Funcionario
+     {
 
-        private static Dictionary<string, ICalculoFolhaDePagamento<TTipoFuncionario>> dictionaryDeCalculoDeSalario;
-
-
+        private Dictionary<string, ICalculoFolhaDePagamento<TTipoFuncionario>> dictionaryDeCalculoDeSalario;
         
-        static FabricaCalculoDeSalarioDeFuncionario()
+        private FabricaCalculoDeSalarioDeFuncionario()
         {
             dictionaryDeCalculoDeSalario = new Dictionary<string, ICalculoFolhaDePagamento<TTipoFuncionario>>() {
                 { "LgProgramaDeEstagio2020.Clt", (ICalculoFolhaDePagamento<TTipoFuncionario>) new CalculoSalarioClt()  },
@@ -24,32 +22,34 @@ namespace LgProgramaDeEstagio2020
 
         }
 
-        public static ICalculoFolhaDePagamento<TTipoFuncionario> Crie()
-        {
-       
+        public ICalculoFolhaDePagamento<TTipoFuncionario> Crie()
+        {       
             return dictionaryDeCalculoDeSalario[(typeof(TTipoFuncionario).FullName)];
         }
 
 
-        //public ICalculoFolhaDePagamento<TTipoFuncionario> Crie()
-        //{
+        // singleton
 
-        //    //switch(typeof(TTipoFuncionario).FullName)
-        //    //{
-        //    //    case "LgProgramaDeEstagio2020.Clt":
-        //    //        return (ICalculoFolhaDePagamento<TTipoFuncionario>) new CalculoSalarioClt();
+        private static volatile FabricaCalculoDeSalarioDeFuncionario<TTipoFuncionario> instance;
+        private static object syncRoot = new Object();
 
-        //    //    case "LgProgramaDeEstagio2020.Prolabore":
-        //    //        return (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioProlabore();
+        public static FabricaCalculoDeSalarioDeFuncionario<TTipoFuncionario> Singleton
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    lock (syncRoot)
+                    {
+                        if (instance == null)
+                            instance = new FabricaCalculoDeSalarioDeFuncionario<TTipoFuncionario>();
+                    }
+                }
 
-        //    //    case "LgProgramaDeEstagio2020.Autonomo":
-        //    //        return (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioAutonomo();
-
-
-        //    //}
-        //}
-
-
-
+                return instance;
+            }
         }
+
+
+    }
     }
