@@ -35,7 +35,5 @@ namespace LgProgramaDeEstagio2020
             return ContadorDias;
         }
 
-        
-
     }
 }
