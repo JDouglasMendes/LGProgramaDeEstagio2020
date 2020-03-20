@@ -42,9 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autonomo.cs" />
+    <Compile Include="BancoDeDadosEmMemoria.cs" />
     <Compile Include="CalculaFolha.cs" />
     <Compile Include="Afastamento.cs" />
     <Compile Include="CalculoDeFerias.cs" />
+    <Compile Include="EnumTipoCalculado.cs" />
+    <Compile Include="ITabelaDeDados.cs" />
+    <Compile Include="TabelaValoresCalculados.cs" />
     <Compile Include="CalculoSalarioAutonomo.cs" />
     <Compile Include="CalculoSalarioClt.cs" />
     <Compile Include="CalculoSalarioProlabore.cs" />
