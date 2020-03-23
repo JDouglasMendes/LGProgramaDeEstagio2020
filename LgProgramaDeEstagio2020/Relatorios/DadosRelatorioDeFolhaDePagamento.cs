@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020.Relatorios
 {
-    class DadosRelatorioDeFolhaDePagamento
+    public class DadosRelatorioDeFolhaDePagamento
     {
     
         public string Matricula { get; private set;}

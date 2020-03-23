@@ -15,10 +15,10 @@ namespace LgProgramaDeEstagio2020
         private FabricaCalculoDeSalarioDeFuncionario()
         {
             dictionaryDeCalculoDeSalario = new Dictionary<string, ICalculoFolhaDePagamento<TTipoFuncionario>>() {
-                { "LgProgramaDeEstagio2020.Clt", (ICalculoFolhaDePagamento<TTipoFuncionario>) new CalculoSalarioClt()  },
-                { "LgProgramaDeEstagio2020.Autonomo", (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioAutonomo()},
-                { "LgProgramaDeEstagio2020.Prolabore", (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioProlabore()},
-                { "LgProgramaDeEstagio2020.Intermitente", (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioIntermitente()}
+                { "LgProgramaDeEstagio2020.CalculoDeSalario.Clt", (ICalculoFolhaDePagamento<TTipoFuncionario>) new CalculoSalarioClt()  },
+                { "LgProgramaDeEstagio2020.CalculoDeSalario.Autonomo", (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioAutonomo()},
+                { "LgProgramaDeEstagio2020.CalculoDeSalario.Prolabore", (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioProlabore()},
+                { "LgProgramaDeEstagio2020.CalculoDeSalario.Intermitente", (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioIntermitente()}
             };
 
         }

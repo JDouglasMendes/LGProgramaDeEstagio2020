@@ -6,9 +6,9 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020.Relatorios
 {
-    class RelatorioDeFolhaDePagamento
+    public class RelatorioDeFolhaDePagamento : Relatorio<DadosRelatorioDeFolhaDePagamento>
     {
-        private List<DadosRelatorioDeFolhaDePagamento> BuscarDados()
+        public override List<DadosRelatorioDeFolhaDePagamento> BuscarDados()
         {
             var listaDeTabelasDeFuncionarios = BancoDeDadosEmMemoria<TabelaDeFuncionarios>.Singleton.Select();
             var listaDeTabelasValoresCalculados = BancoDeDadosEmMemoria<TabelaValoresCalculados>.Singleton.Select();
@@ -19,19 +19,10 @@ namespace LgProgramaDeEstagio2020.Relatorios
                 listaDeDadosDaFolha.Add(new DadosRelatorioDeFolhaDePagamento(linha.TransformeEmTabela().Matricula,
                     listaDeTabelasDeFuncionarios.First(x => x.TransformeEmTabela().Matricula == linha.TransformeEmTabela().Matricula).TransformeEmTabela().Nome,
                     linha.TransformeEmTabela().Valor));
-       
+
             }
             return listaDeDadosDaFolha.OrderBy(x => x.Matricula).ToList();
         }
 
-        public void ExibirRelatorioDeAdmissoes()
-        {
-            BuscarDados().ForEach(EscrevaLinha);
-        }
-
-        private void EscrevaLinha(DadosRelatorioDeFolhaDePagamento obj)
-        {
-            Console.WriteLine(obj);
-        }
     }
 }
