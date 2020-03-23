@@ -14,8 +14,11 @@ namespace LgProgramaDeEstagio2020
 
             //  var eventos = new Eventos("", DateTime.Now, DateTime.Now);            
             //FabricaCalculoDeSalarioDeFuncionario<Autonomo>.Crie();
-            var  relatorio= Fabricas.FabricaDeRelatorios<Relatorios.DadosRelatorioDeAdmissao>.Singleton.Crie();
-            relatorio.Comparadorr = new OrdenarRelatorioPorDescrescente();
+            var  relatorio = Fabricas.FabricaDeRelatorios<Relatorios.DadosRelatorioDeAdmissao>.Singleton.Crie();
+
+
+            relatorio.Comparador = new Relatorios.OrdenacaoDecrescente<Relatorios.DadosRelatorioDeAdmissao>();
+
             relatorio.ExibirRelatorio();
         }
     }

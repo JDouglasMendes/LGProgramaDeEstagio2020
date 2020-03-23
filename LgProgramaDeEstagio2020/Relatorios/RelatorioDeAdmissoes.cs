@@ -18,17 +18,20 @@ namespace LgProgramaDeEstagio2020.Relatorios
                 listaDeDadosDeAdmissao.Add(new DadosRelatorioDeAdmissao(linha.TransformeEmTabela().Nome, linha.TransformeEmTabela().DataAdmissao));
             }
 
-            listaDeDadosDeAdmissao.Sort((x, y) =>
-            {
-                return x.Nome.CompareTo(y.Nome) == 0 ? x.DataDeAdimissao.CompareTo(y.DataDeAdimissao) : x.Nome.CompareTo(y.Nome);
-            });
+            /* listaDeDadosDeAdmissao.Sort((x, y) =>
+             {
+                 return x.Nome.CompareTo(y.Nome) == 0 ? x.DataDeAdimissao.CompareTo(y.DataDeAdimissao) : x.Nome.CompareTo(y.Nome);
+             });
+
+             //listaDeDadosDeAdmissao.OrderBy(x => x.Nome).ThenBy(x => x.DataDeAdimissao).ToList();
+
+
+             //Se Existe critorio de ordenação
+
+            listaDeDadosDeAdmissao.Sort(Comparador);*/
 
             listaDeDadosDeAdmissao.Sort(Comparador);
-            //Se Existe critorio de ordenação
-
-            listaDeDadosDeAdmissao.Sort(Comparadorr);
-
-            return listaDeDadosDeAdmissao.OrderBy(x => x.Nome).ThenBy(x => x.DataDeAdimissao).ToList();
+            return listaDeDadosDeAdmissao; 
         }
 
         public void ReordenarTabela()

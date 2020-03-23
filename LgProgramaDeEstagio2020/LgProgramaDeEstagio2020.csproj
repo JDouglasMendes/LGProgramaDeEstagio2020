@@ -71,6 +71,8 @@
     <Compile Include="Referencia.cs" />
     <Compile Include="Relatorios\DadosRelatorioDeAdmissao.cs" />
     <Compile Include="Relatorios\DadosRelatorioDeFolhaDePagamento.cs" />
+    <Compile Include="Relatorios\OrdenacaoAscendente.cs" />
+    <Compile Include="Relatorios\OrdenacaoDecrescente.cs" />
     <Compile Include="Relatorios\Relatorio.cs" />
     <Compile Include="Relatorios\RelatorioDeAdmissoes.cs" />
     <Compile Include="Relatorios\RelatorioDeFolhaDePagamento.cs" />
