@@ -15,5 +15,10 @@ namespace LgProgramaDeEstagio2020.Relatorios
             Nome = nome;
             DataDeAdimissao = dataDeAdimissao;
         }
+
+        public override string ToString()
+        {
+            return $"Nome: {Nome} Data de Admissão: {DataDeAdimissao.ToShortDateString()}";
+        }
     }
 }
