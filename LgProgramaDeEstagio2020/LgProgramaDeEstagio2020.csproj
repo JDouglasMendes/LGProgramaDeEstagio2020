@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BancoDeDados\EnumTipoFuncionario.cs" />
     <Compile Include="BancoDeDados\TabelaDeFuncionarios.cs" />
+    <Compile Include="Contratos\ITipoCalculoRepository.cs" />
     <Compile Include="Fabricas\FabricaDeRelatorios.cs" />
     <Compile Include="Funcionarios\Autonomo.cs" />
     <Compile Include="BancoDeDados\BancoDeDadosEmMemoria.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Relatorios\Relatorio.cs" />
     <Compile Include="Relatorios\RelatorioDeAdmissoes.cs" />
     <Compile Include="Relatorios\RelatorioDeFolhaDePagamento.cs" />
+    <Compile Include="Repositorio\TipoCalculoRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
