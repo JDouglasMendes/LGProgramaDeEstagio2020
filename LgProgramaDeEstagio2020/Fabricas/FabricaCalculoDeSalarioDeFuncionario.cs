@@ -17,7 +17,8 @@ namespace LgProgramaDeEstagio2020
             dictionaryDeCalculoDeSalario = new Dictionary<string, ICalculoFolhaDePagamento<TTipoFuncionario>>() {
                 { "LgProgramaDeEstagio2020.Clt", (ICalculoFolhaDePagamento<TTipoFuncionario>) new CalculoSalarioClt()  },
                 { "LgProgramaDeEstagio2020.Autonomo", (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioAutonomo()},
-                { "LgProgramaDeEstagio2020.Prolabore", (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioProlabore()}
+                { "LgProgramaDeEstagio2020.Prolabore", (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioProlabore()},
+                { "LgProgramaDeEstagio2020.Intermitente", (ICalculoFolhaDePagamento<TTipoFuncionario>)new CalculoSalarioIntermitente()}
             };
 
         }

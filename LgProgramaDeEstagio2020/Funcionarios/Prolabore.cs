@@ -9,8 +9,8 @@ namespace LgProgramaDeEstagio2020
     {
         private List<Ferias> listaDeFerias { get; set; }
 
-        public Prolabore(string matricula, string nome, double salario, DateTime dataAdmissao, string tipoFuncionario, string cargo) 
-            : base(matricula, nome, salario, dataAdmissao, tipoFuncionario, cargo)
+        public Prolabore(string matricula, string nome, double salario, DateTime dataAdmissao, string cargo) 
+            : base(matricula, nome, salario, dataAdmissao, cargo)
         {
            
         }

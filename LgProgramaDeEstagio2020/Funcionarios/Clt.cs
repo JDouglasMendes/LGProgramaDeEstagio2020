@@ -11,8 +11,8 @@ namespace LgProgramaDeEstagio2020
         private List<Ferias> listaDeFerias { get; set; }
         private List<Afastamento> listaDeDiasAfastado;
 
-        public Clt(string matricula, string nome, double salario, DateTime dataAdmissao, string tipoFuncionario, string cargo) : 
-            base(matricula,nome,salario,dataAdmissao,tipoFuncionario,cargo)
+        public Clt(string matricula, string nome, double salario, DateTime dataAdmissao, string cargo) : 
+            base(matricula,nome,salario,dataAdmissao,cargo)
         {
              listaDeDiasAfastado = new List<Afastamento>();
         }

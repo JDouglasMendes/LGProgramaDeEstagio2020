@@ -7,7 +7,6 @@ namespace LgProgramaDeEstagio2020
 {
     public interface ITabelaDeDados<Tabela> : IEquatable<Tabela>
     {
-
-
+        Tabela TransformeEmTabela();
     }
 }

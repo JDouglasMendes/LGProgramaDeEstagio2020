@@ -54,6 +54,13 @@ namespace LgProgramaDeEstagio2020
 
             return dictionaryDeDados[typeof(Tabela)].Where(filtro).ToList();
         }
+        public List<ITabelaDeDados<Tabela>> Select()
+        {
+            if (!dictionaryDeDados.ContainsKey(typeof(Tabela)))
+                return null;
+
+            return dictionaryDeDados[typeof(Tabela)];
+        }
 
         //Singleton
         private static volatile BancoDeDadosEmMemoria<Tabela> instance;

@@ -7,13 +7,13 @@ namespace LgProgramaDeEstagio2020
 {
     public class TabelaValoresCalculados : ITabelaDeDados<TabelaValoresCalculados>
     {
-        public int Matricula { get; private set; }
+        public string Matricula { get; private set; }
         public EnumTipoCalculado TipoCalculado { get; private set; }
         public int Mes { get; private set; }
         public int Ano { get; private set; }
         public double Valor { get; private set; }
 
-        public TabelaValoresCalculados(int matricula, EnumTipoCalculado tipoCalculado, int mes, int ano, double valor)
+        public TabelaValoresCalculados(string matricula, EnumTipoCalculado tipoCalculado, int mes, int ano, double valor)
         {
             Matricula = matricula;
             TipoCalculado = tipoCalculado;
@@ -28,6 +28,11 @@ namespace LgProgramaDeEstagio2020
                 return true;
 
             return false;
+        }
+
+        public TabelaValoresCalculados TransformeEmTabela()
+        {
+            return this;
         }
     }
 }

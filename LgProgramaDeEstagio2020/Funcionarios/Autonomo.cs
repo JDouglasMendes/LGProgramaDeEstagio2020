@@ -8,8 +8,8 @@ namespace LgProgramaDeEstagio2020
     public class Autonomo : Funcionario
     {
         private List<DiasTrabalhadosNoMes> listaDeDiasTrabalhados;
-        public Autonomo(string matricula, string nome, double salario, DateTime dataAdmissao, string tipoFuncionario, string cargo) : 
-            base(matricula, nome, salario, dataAdmissao, tipoFuncionario, cargo)
+        public Autonomo(string matricula, string nome, double salario, DateTime dataAdmissao, string cargo) : 
+            base(matricula, nome, salario, dataAdmissao, cargo)
         {
             listaDeDiasTrabalhados = new List<DiasTrabalhadosNoMes>();
         }
