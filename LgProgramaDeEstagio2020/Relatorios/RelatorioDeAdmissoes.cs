@@ -26,7 +26,7 @@ namespace LgProgramaDeEstagio2020.Relatorios
             listaDeDadosDeAdmissao.Sort(Comparador);
             //Se Existe critorio de ordenação
 
-            listaDeDadosDeAdmissao.Sort(Comparadorr);
+            listaDeDadosDeAdmissao.Sort(Comparador);
 
             return listaDeDadosDeAdmissao.OrderBy(x => x.Nome).ThenBy(x => x.DataDeAdimissao).ToList();
         }

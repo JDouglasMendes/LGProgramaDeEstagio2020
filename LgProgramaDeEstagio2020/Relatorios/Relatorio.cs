@@ -14,8 +14,8 @@ namespace LgProgramaDeEstagio2020.Relatorios
             BuscarDados().ForEach(EscrevaLinha);
         }
 
-        public abstract int Comparador(TipoRelatorio x, TipoRelatorio y);
-        public IComparer<TipoRelatorio> Comparadorr { get; set; }
+       // public abstract int Comparador(TipoRelatorio x, TipoRelatorio y);
+        public IComparer<TipoRelatorio> Comparador { get; set; }
          private void EscrevaLinha(TipoRelatorio obj)
         {
             Console.WriteLine(obj);
