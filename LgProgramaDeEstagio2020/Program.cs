@@ -16,8 +16,7 @@ namespace LgProgramaDeEstagio2020
             //FabricaCalculoDeSalarioDeFuncionario<Autonomo>.Crie();
             var  relatorio = Fabricas.FabricaDeRelatorios<Relatorios.DadosRelatorioDeAdmissao>.Singleton.Crie();
 
-
-            relatorio.Comparador = new Relatorios.OrdenacaoDecrescente<Relatorios.DadosRelatorioDeAdmissao>();
+            relatorio.Comparador = new Relatorios.OrdenacaoRelatorioAdmissao();
 
             relatorio.ExibirRelatorio();
         }
