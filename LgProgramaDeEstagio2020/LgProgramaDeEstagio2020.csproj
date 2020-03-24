@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Atributos\TipoCalculoAtributo.cs" />
     <Compile Include="BancoDeDados\EnumTipoFuncionario.cs" />
     <Compile Include="BancoDeDados\TabelaDeFuncionarios.cs" />
+    <Compile Include="CalculoDeSalario\CalculoSalarioAssincrono.cs" />
+    <Compile Include="Contratos\ICalculoSalarioAssincrono.cs" />
     <Compile Include="Contratos\ITipoCalculoRepository.cs" />
     <Compile Include="Fabricas\FabricaDeRelatorios.cs" />
     <Compile Include="Funcionarios\Autonomo.cs" />

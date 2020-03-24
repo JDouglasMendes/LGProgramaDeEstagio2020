@@ -1,4 +1,5 @@
-﻿using LgProgramaDeEstagio2020.Repositorio;
+﻿using LgProgramaDeEstagio2020.Atributos;
+using LgProgramaDeEstagio2020.Repositorio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,8 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020
 {
-     public class CalculoSalarioIntermitente : ICalculoFolhaDePagamento<Intermitente>
+    [TipoCalculoAtributo(EnumTipoCalculado.Salario)]
+    public class CalculoSalarioIntermitente : ICalculoFolhaDePagamento<Intermitente>
     {
         public void CalcularFolha(Intermitente funcionario, Referencia referencia)
         {
