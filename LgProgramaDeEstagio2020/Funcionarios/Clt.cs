@@ -17,8 +17,6 @@ namespace LgProgramaDeEstagio2020
              listaDeDiasAfastado = new List<Afastamento>();
         }
 
-        
-
         public void AdicioneDiasAfastados(Afastamento diasAfastadosNoMes)
         {
             listaDeDiasAfastado.Add(diasAfastadosNoMes);

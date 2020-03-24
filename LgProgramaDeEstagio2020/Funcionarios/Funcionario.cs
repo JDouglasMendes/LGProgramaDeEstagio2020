@@ -7,17 +7,21 @@ namespace LgProgramaDeEstagio2020
 {
     public abstract class Funcionario
     {
-        [Obrigatorio("Matrícula é Obrigatoria")]
+        [Obrigatorio("Matrícula é obrigatória.")]
         public string Matricula { get; protected set; }
-        [Obrigatorio]
-        [Tamanho(3,100)]
+
+        [Obrigatorio("Nome é obrigatório.")]
+        [Tamanho(3,100, "O nome deve ser maior que 3 e menor que 100 caracteres.")]
         public string Nome { get; protected set; }
-        [Obrigatorio]
-        [MaiorQueZero]
+
+        [Obrigatorio("Salario é obrigatório.")]
+        [MaiorQueZero("Salário deve ser maior que zero.")]
         public double Salario { get; protected set; }
-        [Obrigatorio]
+
+        [Obrigatorio("Data de Admissão é obrigatória")]
         public DateTime DataAdmissao { get; protected set; }
-        [Obrigatorio]
+
+        [Obrigatorio("Cargo é obrigatório.")]
         public string Cargo { get; protected set; }
        
         public Funcionario(string matricula, string nome, double salario, DateTime dataAdmissao, string cargo)
@@ -28,22 +32,6 @@ namespace LgProgramaDeEstagio2020
             DataAdmissao = dataAdmissao;
             Cargo = cargo;
         }
-
-        /*public int CalcularDiasAfastados(int mes, int ano)
-        {
-            int contadorDias = 0;
-            for(int i = 0; i < Eventos.Count; i++)
-            {
-                if (Eventos[i].TipoEvento == "AFASTAMENTO" && Eventos[i].DataInicio.Month == mes && Eventos[i].DataInicio.Year == ano)
-                    contadorDias += Eventos[i].ObtenhaIntervaloDeDias();
-            }
-
-            return Eventos
-                .Where(evento => evento.TipoEvento == "AFASTAMENTO" && evento.DataInicio.Month == mes && evento.DataInicio.Year == ano).ToList()
-                .Sum(x => x.ObtenhaIntervaloDeDias());
-
-            return contadorDias;
-        }*/
     }
 
 }

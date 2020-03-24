@@ -15,7 +15,7 @@ namespace LgProgramaDeEstagio2020.Validacoes
             obj.GetType().GetProperties().ToList().ForEach(propriedade => {
                 propriedade.GetCustomAttributes(false).ToList().Where(atributo => atributo.GetType() == typeof(IValidacaoAtributos)).ToList().
                 ForEach(validacao => {
-                    if (((IValidacaoAtributos)validacao).Validacao(propriedade.GetValue(obj, null)))
+                    if (!((IValidacaoAtributos)validacao).Validacao(propriedade.GetValue(obj, null)))
                     {
                         listaDeValidacao.Add(((IValidacaoAtributos)validacao).Mensagem);
                     };

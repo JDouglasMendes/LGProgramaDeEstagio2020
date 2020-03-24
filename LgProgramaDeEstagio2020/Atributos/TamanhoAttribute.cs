@@ -1,16 +1,24 @@
-﻿using System;
+﻿using LgProgramaDeEstagio2020.Contratos;
+using System;
 
 namespace LgProgramaDeEstagio2020
 {
-    public class TamanhoAttribute : Attribute
+    public class TamanhoAttribute : Attribute, IValidacaoAtributos
     {
-        public int v1 { }
-        public int v2;
+        public string Mensagem { get; }
+        public int tamanhoMinimo;
+        public int tamanhoMaximo;
 
-        public TamanhoAttribute(int v1, int v2)
+        public TamanhoAttribute(int tamanhoMinimo, int tamanhoMaximo, string mensagem)
         {
-            this.v1 = v1;
-            this.v2 = v2;
+            this.tamanhoMinimo = tamanhoMinimo;
+            this.tamanhoMaximo = tamanhoMaximo;
+            this.Mensagem = mensagem;
+        }
+
+        public bool Validacao(object obj)
+        {
+            return ((string)obj).Length > tamanhoMinimo && ((string)obj).Length <= tamanhoMaximo;
         }
     }
 }
