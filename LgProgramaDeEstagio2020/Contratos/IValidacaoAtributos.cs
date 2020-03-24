@@ -5,8 +5,9 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020.Contratos
 {
-    public interface ICalculoSalarioAssincrono
+    public interface IValidacaoAtributos
     {
-        void CalcularFolha(Funcionario funcionario, Referencia referencia);
+        string Mensagem { get; }
+        bool Validacao(object obj);
     }
 }

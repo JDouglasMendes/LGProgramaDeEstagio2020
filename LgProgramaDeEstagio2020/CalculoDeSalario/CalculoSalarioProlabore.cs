@@ -1,4 +1,5 @@
 ﻿using LgProgramaDeEstagio2020.Atributos;
+using LgProgramaDeEstagio2020.Contratos;
 using LgProgramaDeEstagio2020.Repositorio;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Text;
 namespace LgProgramaDeEstagio2020
 {
     [TipoCalculoAtributo(EnumTipoCalculado.Salario)]
-    public class CalculoSalarioProlabore : ICalculoFolhaDePagamento<Prolabore>
+    public class CalculoSalarioProlabore : ICalculoFolhaDePagamento<Prolabore>, ICalculoSalarioAssincrono
     {
         public void CalcularFolha(Prolabore prolabore, Referencia referencia)
         {
@@ -16,6 +17,11 @@ namespace LgProgramaDeEstagio2020
 
             var repositorio = new TipoCalculoRepository();
             repositorio.Adicionar(prolabore, referencia, EnumTipoCalculado.Salario, valor);
+        }
+
+        public void CalcularFolha(Funcionario funcionario, Referencia referencia)
+        {
+            CalcularFolha(funcionario, referencia);
         }
     }
 }

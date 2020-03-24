@@ -44,13 +44,18 @@
     <Compile Include="Atributos\TipoCalculoAtributo.cs" />
     <Compile Include="BancoDeDados\EnumTipoFuncionario.cs" />
     <Compile Include="BancoDeDados\TabelaDeFuncionarios.cs" />
+    <Compile Include="CalculoDeSalario\CalculoAssincrono.cs" />
     <Compile Include="CalculoDeSalario\CalculoSalarioAssincrono.cs" />
     <Compile Include="Contratos\ICalculoSalarioAssincrono.cs" />
     <Compile Include="Contratos\ITipoCalculoRepository.cs" />
+    <Compile Include="Contratos\IValidacaoAtributos.cs" />
     <Compile Include="Fabricas\FabricaDeRelatorios.cs" />
     <Compile Include="Funcionarios\Autonomo.cs" />
     <Compile Include="BancoDeDados\BancoDeDadosEmMemoria.cs" />
     <Compile Include="CalculoDeSalario\CalculaFolha.cs" />
+    <Compile Include="Atributos\ObrigatorioAttribute.cs" />
+    <Compile Include="Atributos\TamanhoAttribute.cs" />
+    <Compile Include="Atributos\MaiorQueZeroAttribute.cs" />
     <Compile Include="Periodos\Afastamento.cs" />
     <Compile Include="CalculoDeSalario\CalculoDeFerias.cs" />
     <Compile Include="CalculoDeSalario\CalculoSalarioIntermitente.cs" />
@@ -80,6 +85,7 @@
     <Compile Include="Relatorios\RelatorioDeAdmissoes.cs" />
     <Compile Include="Relatorios\RelatorioDeFolhaDePagamento.cs" />
     <Compile Include="Repositorio\TipoCalculoRepository.cs" />
+    <Compile Include="Validacoes\Validacao.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

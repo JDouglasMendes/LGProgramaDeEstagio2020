@@ -7,10 +7,17 @@ namespace LgProgramaDeEstagio2020
 {
     public abstract class Funcionario
     {
+        [Obrigatorio("Matrícula é Obrigatoria")]
         public string Matricula { get; protected set; }
+        [Obrigatorio]
+        [Tamanho(3,100)]
         public string Nome { get; protected set; }
+        [Obrigatorio]
+        [MaiorQueZero]
         public double Salario { get; protected set; }
+        [Obrigatorio]
         public DateTime DataAdmissao { get; protected set; }
+        [Obrigatorio]
         public string Cargo { get; protected set; }
        
         public Funcionario(string matricula, string nome, double salario, DateTime dataAdmissao, string cargo)
