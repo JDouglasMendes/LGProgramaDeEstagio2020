@@ -1,0 +1,1 @@
+O nome deve ser maior que 3 e menor que 100 caracteres.

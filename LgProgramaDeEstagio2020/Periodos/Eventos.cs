@@ -28,7 +28,7 @@ namespace LgProgramaDeEstagio2020
         public int ObtenhaIntervaloDiasUteis() //Para CLT
         {
             int ContadorDias = 0;
-            for (DateTime i = DataInicio.Date; i <= DataFim.Date; i.AddDays(1))
+            for (DateTime i = DataInicio.Date; i <= DataFim.Date; i = i.AddDays(1))
             {
                 if (i.DayOfWeek != DayOfWeek.Saturday && i.DayOfWeek != DayOfWeek.Sunday)
                 {

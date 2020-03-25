@@ -7,18 +7,21 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020.Persistencia
 {
-    public class MantenedorDeErros
+    public static class MantenedorDeErros
     {
-        public void GravarErros(List<string> listaErros){
-            var info = Path.Combine((new FileInfo(Assembly.GetExecutingAssembly().Location)).FullName, "\\Erros.txt");
+        public static bool GravarErros(List<string> listaErros){
+            if (listaErros.Count() == 0)
+                return false;
+            var info = Path.Combine(Directory.GetCurrentDirectory(), "Erros.txt");
 
             if (! File.Exists(info))        
                 File.Create(info);
 
-            using (var arquivo = new StreamWriter(info, true))
+            using (var arquivo = new StreamWriter(info, false))
             {
                 listaErros.ForEach(arquivo.WriteLine);
             }
+            return true;
         }
     }
 }

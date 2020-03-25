@@ -8,7 +8,7 @@ namespace LgProgramaDeEstagio2020.Relatorios
 {
     public class RelatorioDeFolhaDePagamento : Relatorio<DadosRelatorioDeFolhaDePagamento>
     {
-        public override List<DadosRelatorioDeFolhaDePagamento> BuscarDados()
+        protected override List<DadosRelatorioDeFolhaDePagamento> BuscarDados()
         {
             var listaDeTabelasDeFuncionarios = BancoDeDadosEmMemoria<TabelaDeFuncionarios>.Singleton.Select();
             var listaDeTabelasValoresCalculados = BancoDeDadosEmMemoria<TabelaValoresCalculados>.Singleton.Select();

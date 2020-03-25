@@ -18,14 +18,15 @@ namespace LgProgramaDeEstagio2020
         {
             dictionaryDeCalculoDeSalario = new Dictionary<string, ICalculoSalarioAssincrono>();
 
-            Assembly.GetExecutingAssembly().GetTypes().ToList().ForEach(x => 
+            Assembly.GetAssembly(typeof(Program)).GetTypes().ToList().ForEach(x => 
             {
-                var tipoCalculo = x.GetType().GetCustomAttributes(false).ToList().Where(y => y.GetType() == typeof(TipoCalculoAtributo)).ToList().First() as TipoCalculoAtributo;
-
-                if(tipoCalculo != null && tipoCalculo.TipoCalculo != EnumTipoCalculado.Ferias)
-                {
-                    dictionaryDeCalculoDeSalario.Add(tipoCalculo.TipoDeFuncionario.FullName, Activator.CreateInstance(x) as ICalculoSalarioAssincrono);
-                }
+                x.GetCustomAttributes(false).ToList().ForEach(y => {
+                    var tipoCalculo = y as TipoCalculoAtributo;
+                    if (tipoCalculo != null && tipoCalculo.TipoCalculo != EnumTipoCalculado.Ferias)
+                    {
+                        dictionaryDeCalculoDeSalario.Add(tipoCalculo.TipoDeFuncionario.FullName, Activator.CreateInstance(x) as ICalculoSalarioAssincrono);
+                    }
+                });
             });
 
             //{

@@ -7,7 +7,7 @@ namespace LgProgramaDeEstagio2020.Relatorios
 {
     public abstract class Relatorio<TipoRelatorio>
     {
-        public abstract List<TipoRelatorio> BuscarDados();
+        protected abstract List<TipoRelatorio> BuscarDados();
 
         public void ExibirRelatorio()
         {

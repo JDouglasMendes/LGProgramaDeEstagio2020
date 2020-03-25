@@ -23,7 +23,7 @@ namespace LgProgramaDeEstagio2020
 
         public void CalcularFolha(Funcionario funcionario, Referencia referencia)
         {
-            CalcularFolha(funcionario, referencia);
+            CalcularFolha((Clt)funcionario, referencia);
         }
     }
 }

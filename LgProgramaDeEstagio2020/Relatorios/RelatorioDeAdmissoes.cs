@@ -8,7 +8,7 @@ namespace LgProgramaDeEstagio2020.Relatorios
 {
     public class RelatorioDeAdmissoes : Relatorio<DadosRelatorioDeAdmissao>
     {
-        public override List<DadosRelatorioDeAdmissao> BuscarDados()
+        protected override List<DadosRelatorioDeAdmissao> BuscarDados()
         {
             var listaDeTabelasDeFuncionarios = BancoDeDadosEmMemoria<TabelaDeFuncionarios>.Singleton.Select();
             List<DadosRelatorioDeAdmissao> listaDeDadosDeAdmissao = new List<DadosRelatorioDeAdmissao>();
@@ -17,8 +17,8 @@ namespace LgProgramaDeEstagio2020.Relatorios
             {
                 listaDeDadosDeAdmissao.Add(new DadosRelatorioDeAdmissao(linha.TransformeEmTabela().Nome, linha.TransformeEmTabela().DataAdmissao));
             }
-
-            listaDeDadosDeAdmissao.Sort(Comparador);
+            if(Comparador != null)
+                listaDeDadosDeAdmissao.Sort(Comparador);
 
             return listaDeDadosDeAdmissao;
 

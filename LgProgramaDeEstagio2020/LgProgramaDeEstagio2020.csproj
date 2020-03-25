@@ -44,6 +44,7 @@
     <Compile Include="Atributos\TipoCalculoAtributo.cs" />
     <Compile Include="BancoDeDados\EnumTipoFuncionario.cs" />
     <Compile Include="BancoDeDados\TabelaDeFuncionarios.cs" />
+    <Compile Include="Cadastro\CadastroDeFuncionarios.cs" />
     <Compile Include="CalculoDeSalario\CalculoAssincrono.cs" />
     <Compile Include="CalculoDeSalario\CalculoSalarioAssincrono.cs" />
     <Compile Include="Contratos\ICalculoSalarioAssincrono.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Relatorios\RelatorioDeFolhaDePagamento.cs" />
     <Compile Include="Repositorio\TipoCalculoRepository.cs" />
     <Compile Include="Validacoes\Validacao.cs" />
+    <Compile Include="Validacoes\ValidacaoException.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

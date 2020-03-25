@@ -14,7 +14,7 @@ namespace LgProgramaDeEstagio2020
         
         public bool Validacao(object obj)
         {
-            return (double)obj < 0;
+            return (double)obj > 0;
         }
     }
 }
