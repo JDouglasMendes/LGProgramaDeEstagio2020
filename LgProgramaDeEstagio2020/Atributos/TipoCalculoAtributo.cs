@@ -8,8 +8,13 @@ namespace LgProgramaDeEstagio2020.Atributos
     public class TipoCalculoAtributo : Attribute
     {
         public EnumTipoCalculado TipoCalculo { get; }
+        public Type TipoDeFuncionario { get; }
 
-        public TipoCalculoAtributo(EnumTipoCalculado tipoCalculado) => TipoCalculo = tipoCalculado;
-       
+        public TipoCalculoAtributo(EnumTipoCalculado tipoCalculado, Type tipoDeFuncionario)
+        {
+            TipoCalculo = tipoCalculado;
+            TipoDeFuncionario = tipoDeFuncionario;
+        }
+
     }
 }

@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 
 namespace LgProgramaDeEstagio2020
-{
-    [TipoCalculoAtributo(EnumTipoCalculado.Salario)]
+{ 
+    [TipoCalculoAtributo(EnumTipoCalculado.Salario,typeof(Intermitente))]
     public class CalculoSalarioIntermitente : ICalculoFolhaDePagamento<Intermitente>, ICalculoSalarioAssincrono
     {
         public void CalcularFolha(Intermitente funcionario, Referencia referencia)

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020
 {
-    [TipoCalculoAtributo(EnumTipoCalculado.Ferias)] 
+    [TipoCalculoAtributo(EnumTipoCalculado.Ferias,typeof(Funcionario))] 
     public class CalculoDeFerias<TContratoDeFerias> where TContratoDeFerias : Funcionario, IContratoDeFerias
     {
         public void CalcularFerias(TContratoDeFerias funcionario, Referencia referencia)

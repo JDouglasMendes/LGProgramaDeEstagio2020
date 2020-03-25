@@ -8,7 +8,7 @@ using System.Text;
 
 namespace LgProgramaDeEstagio2020
 {
-    [TipoCalculoAtributo(EnumTipoCalculado.Salario)]
+    [TipoCalculoAtributo(EnumTipoCalculado.Salario,typeof(Clt))]
     public class CalculoSalarioClt : ICalculoFolhaDePagamento<Clt>, ICalculoSalarioAssincrono
     {
         public void CalcularFolha(Clt clt, Referencia referencia)
