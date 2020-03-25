@@ -74,6 +74,7 @@
     <Compile Include="Funcionarios\Funcionario.cs" />
     <Compile Include="Contratos\ICalculoFolhaDePagamento.cs" />
     <Compile Include="Contratos\IContratoDeFerias.cs" />
+    <Compile Include="Persistencia\MantenedorDeErros.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Funcionarios\Prolabore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
