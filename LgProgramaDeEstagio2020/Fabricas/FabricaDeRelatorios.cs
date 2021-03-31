@@ -8,20 +8,20 @@ namespace LgProgramaDeEstagio2020.Fabricas
 {
     public class FabricaDeRelatorios<TTipoRelatorio>
     {
-        private Dictionary<string, Relatorio<TTipoRelatorio>> dicionarioDeRelatorios;
+        private Dictionary<string, Object> dicionarioDeRelatorios;
 
         private FabricaDeRelatorios()
         {
-            dicionarioDeRelatorios = new Dictionary<string, Relatorio<TTipoRelatorio>>()
+            dicionarioDeRelatorios = new Dictionary<string, Object>()
             {
-                {"LgProgramaDeEstagio2020.Relatorios.RelatorioDeAdmissoes",  new RelatorioDeAdmissoes() as Relatorio<TTipoRelatorio>},
-                {"LgProgramaDeEstagio2020.Relatorios.RelatorioDeFolhaDePagamento",  new RelatorioDeFolhaDePagamento() as Relatorio<TTipoRelatorio>}
+                {"LgProgramaDeEstagio2020.Relatorios.RelatorioDeAdmissoes",  new RelatorioDeAdmissoes()},
+                {"LgProgramaDeEstagio2020.Relatorios.RelatorioDeFolhaDePagamento",  new RelatorioDeFolhaDePagamento()}
             };
         }
 
-        public Relatorio<TTipoRelatorio> Crie()
+        public TTipoRelatorio Crie()
         {
-            return dicionarioDeRelatorios[(typeof(TTipoRelatorio).FullName)];
+            return (TTipoRelatorio)dicionarioDeRelatorios[(typeof(TTipoRelatorio).FullName)];
         }
 
         // singleton

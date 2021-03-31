@@ -10,7 +10,7 @@ namespace LgProgramaDeEstagio2020.CalculoDeSalario
 
         private List<Funcionario> _listaDeFuncionarios;
         private Referencia referencia;
-        private int ProcessadoresDaMaquina() => System.Environment.ProcessorCount;
+        private int ProcessadoresDaMaquina() => System.Environment.ProcessorCount * 2;
 
         public CalculoSalarioAssincrono(List<Funcionario> listaDeFuncionarios, Referencia referencia)
         {
