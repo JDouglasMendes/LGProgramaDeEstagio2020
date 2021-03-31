@@ -36,6 +36,9 @@ namespace LgProgramaDeEstagio2020
 
             var relatorio2 = new Relatorios.RelatorioDeFolhaDePagamento();
             relatorio2.ExibirRelatorio();
+            Fabricas.FabricaDeRelatorios<Relatorios.RelatorioDeFolhaDePagamento>.Singleton.Crie().ExibirRelatorio();
+            Fabricas.FabricaDeRelatorios<Relatorios.RelatorioDeFolhaDePagamento>.Singleton.Crie().ExibirRelatorio();
+            Fabricas.FabricaDeRelatorios<Relatorios.RelatorioDeAdmissoes>.Singleton.Crie().ExibirRelatorio();
 
             Console.Read();
 
